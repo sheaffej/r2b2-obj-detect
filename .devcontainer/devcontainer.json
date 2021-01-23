@@ -1,0 +1,32 @@
+{
+	"name": "R2B2 Object Detection",
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"context": "..",
+		"image": "b2-obj-detect",
+	},
+	"runArgs": [
+		"--name", "b2-obj-detect-vscode"
+	],
+	"containerEnv": {
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"python.pythonPath": "/usr/local/bin/python",
+		"python.autoComplete.extraPaths": [
+			"/ros/devel/lib/python2.7/dist-packages",
+			"/opt/ros/melodic/lib/python2.7/dist-packages",
+			"/workspaces/b2-base/b2_base/src"
+		],		
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-python.python"
+	]
+
+}

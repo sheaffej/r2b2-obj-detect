@@ -1,0 +1,7 @@
+.devcontainer
+.vscode
+test
+.gitignore
+.git
+build_docker.sh
+README.md
